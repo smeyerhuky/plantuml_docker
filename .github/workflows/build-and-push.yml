@@ -25,15 +25,3 @@ jobs:
           push: true
           tags: smeyerhuky/plantuml:latest
 
-      - name: Send notification
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const message = '# PlantUML Docker Image Updated\n\nA new version of the PlantUML Docker image has been updated and deployed to Docker Hub.\n\n- Image: smeyerhuky/plantuml:latest\n\nFor more information, refer to the [PlantUML Docker repository](https://github.com/smeyerhuky/plantuml_docker).';
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: message
-            });
