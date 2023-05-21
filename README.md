@@ -49,7 +49,7 @@ To generate an image from a PlantUML file using the Docker container, follow the
 
 5. Run the following Docker command:
 
-   `docker run --rm -v "$(pwd)/plantuml:/plantuml" -v "$(pwd)/output:/output" smeyerhuky/plantuml -tpng <path_to_puml_file>`
+   `docker run --rm -v "$(pwd)/plantuml:/app/plantuml" -v "$(pwd)/output:/app/output" smeyerhuky/plantuml -tpng /app/plantuml/<path_to_puml_file>`
 
    Replace `<path_to_puml_file>` with the actual path to your PlantUML file relative to the `plantuml` directory. For example, if your PlantUML file is named `diagram.puml` and located directly inside the `plantuml` directory, you can use `diagram.puml` as the `<path_to_puml_file>`.
 
