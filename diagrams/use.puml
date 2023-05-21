@@ -1,0 +1,21 @@
+@startuml use
+
+User -> "Docker Hub": Pull Docker
+activate "Docker Hub"
+User -> "Docker": Run Docker
+activate "Docker"
+"Docker" -> "Docker": Generate UML
+User <-- "Docker": UML
+
+footer
+This diagram represents the usage of the wrapped PlantUML Docker image.
+
+Use Case:
+- User pulls the Docker image
+- User runs the Docker container
+- Docker generates UML
+- User receives the UML
+
+end footer
+
+@enduml

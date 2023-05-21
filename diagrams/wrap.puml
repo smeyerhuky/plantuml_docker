@@ -1,0 +1,20 @@
+@startuml wrap
+
+User -> "Dockerfile": Pull PlantUML
+activate "Dockerfile"
+"Dockerfile" -> "Dockerfile": Build Docker
+"Dockerfile" -> "Dockerfile": Tag Docker
+"Dockerfile" -> "Dockerfile": Push Docker
+User <-- "Dockerfile": Docker
+
+footer
+This diagram represents the wrapping process of PlantUML with Docker.
+
+Use Case:
+- User pulls the image
+- User builds and tags the Docker image
+- User pushes the Docker image
+
+end footer
+
+@enduml

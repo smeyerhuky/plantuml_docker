@@ -1,0 +1,25 @@
+@startuml deploy
+
+User -> "GitHub Actions": Trigger build-and-push
+activate "GitHub Actions"
+"GitHub Actions" -> "GitHub Actions": Checkout source
+"GitHub Actions" -> "Docker Hub": Log in to Docker Hub
+activate "Docker Hub"
+"GitHub Actions" -> "Docker Hub": Build and push
+"GitHub Actions" -> "Docker Hub": Push Docker
+"GitHub Actions" <-- "Docker Hub": Docker
+"GitHub Actions" -> User: Send notification
+
+footer
+This diagram represents the deployment process of the wrapped PlantUML Docker image to Docker Hub using GitHub Actions.
+
+Use Case:
+- User triggers the build-and-push
+- GitHub Actions checks out the source
+- GitHub Actions logs in to Docker Hub
+- GitHub Actions builds and pushes the Docker image
+- User receives a notification
+
+end footer
+
+@enduml
