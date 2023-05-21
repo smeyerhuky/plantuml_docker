@@ -43,3 +43,19 @@ To update and deploy a new version of the PlantUML Docker image when there is a 
 
 Note: Remember to update the Dockerfile and tag the image with the appropriate version for each release.
 
+## Diagrams
+
+Below are the diagrams representing the different processes involved:
+
+### Wrapping Process
+
+![Wrap Process](out/diagrams/wrap/wrap.png)
+
+### Deployment Process
+
+![Deploy Process](out/diagrams/deploy/deploy.png)
+
+### Usage Process
+
+![Use Process](out/diagrams/use/use.png)
+
